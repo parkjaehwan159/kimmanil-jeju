@@ -309,7 +309,7 @@
             <div class="contact-icon">✉</div>
             <div>
               <span class="label">E-MAIL · 이메일</span>
-              <span class="value">여기에 이메일 주소를 입력하세요</span>
+              <span class="value"><a href="mailto:didimdol-1004@hanmail.net" style="color:inherit; text-decoration:none;">didimdol-1004@hanmail.net</a></span>
             </div>
           </li>
           <li>
@@ -323,7 +323,7 @@
             <div class="contact-icon">⏱</div>
             <div>
               <span class="label">HOURS · 운영시간</span>
-              <span class="value">여기에 운영시간을 입력하세요<br>(예: 09:00 - 18:00, 매주 월요일 휴관)</span>
+              <span class="value">화 ~ 일 · 09:00 — 18:00<br>매주 월요일 정기휴무<br><small style="opacity:.75;">※ 입장 마감 17:40</small></span>
             </div>
           </li>
         </ul>
@@ -332,26 +332,27 @@
       <!-- 우측: 지도 + 안내 -->
       <div id="location" class="map-wrap reveal">
         <div class="map-container">
-          <!-- ★★★★★ 여기에 지도 iframe을 붙여넣으세요 ★★★★★
-               아래 .map-placeholder 전체를 삭제하고 카카오맵/네이버맵 임베드 코드 삽입
-               예) <iframe src="지도_공유_URL" style="width:100%; height:100%; border:0;" allowfullscreen></iframe>
-          -->
-          <div class="map-placeholder">
-            <div class="icon">◎</div>
-            <h4>지도 삽입 영역</h4>
-            <p>
-              이 영역에 카카오맵·네이버맵·구글맵의 공유 iframe 코드를 붙여넣으시면
-              바로 지도가 표시됩니다.
-            </p>
-          </div>
+          <!-- 카카오맵 임베드 -->
+          <div id="daumRoughmapContainer1776728816127" class="root_daum_roughmap root_daum_roughmap_landing"></div>
         </div>
+        <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+        <script charset="UTF-8">
+          new daum.roughmap.Lander({
+            "timestamp": "1776728816127",
+            "key": "2amqbrreme5b",
+            "mapWidth": "500",
+            "mapHeight": "400"
+          }).render();
+        </script>
 
         <div class="map-direction">
           <h4>오시는 길 안내</h4>
-          <!-- ★★★ 교통 안내 수정 위치 ★★★ -->
           <p>
             <b>자가용</b> · 제주국제공항에서 평화로 → 서성로 방면 약 45분 소요<br>
-            <b>대중교통</b> · 의귀리 정류장 하차 (버스 노선은 여기에 입력)<br>
+            <b>버스</b> · <u>231번 · 232번</u> 간선버스(남조로 노선) 탑승 후<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<b>의귀리(헌마공신김만일기념관)</b> 정류장 하차<br>
+            <b>공항에서</b> · 공항버스 101번 → <b>남원환승정류장</b> 하차<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;→ 231 · 232번 환승<br>
             <b>주차</b> · 기념관 내 무료 주차장 이용 가능
           </p>
         </div>
