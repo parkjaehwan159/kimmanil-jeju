@@ -667,12 +667,23 @@ section {
 .map-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 4/3;
+  min-height: 400px;
   background: var(--paper-2);
   border: 1px solid var(--line);
   overflow: hidden;
   box-shadow: var(--shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* 카카오맵 반응형 */
+.root_daum_roughmap {
+  max-width: 100% !important;
+  margin: 0 auto;
+}
+.root_daum_roughmap .wrap_map { max-width: 100% !important; }
+.root_daum_roughmap .map_border { max-width: 100% !important; }
 .map-placeholder {
   position: absolute;
   inset: 0;
